@@ -44,7 +44,7 @@ export function Stacks() {
                       key={index}
                       href={itemImg.url}
                       target="_blank"
-                      className="grid bg-opacity-50 backdrop-blur-3xl place-items-center rounded-lg w-20 h-20 shadow-lg dark:shadow-2xl dark:shadow-gray-700 transition-transform hover:scale-105"
+                      className="grid bg-opacity-50 backdrop-blur-3xl shadow-gray-300 place-items-center rounded-lg w-24 h-24 shadow-lg dark:shadow-2xl dark:shadow-gray-700 transition-transform hover:scale-105"
                     >
                       <Image
                         src={itemImg.src}

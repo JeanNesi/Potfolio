@@ -1,5 +1,4 @@
-import { Hero } from "@/components/hero";
-import { Projects } from "@/components/project";
+import { Hero } from "@/components/Hero";
 import { Stacks } from "@/components/stacks";
 
 export default function Home() {
@@ -8,6 +7,7 @@ export default function Home() {
       <Hero />
 
       <Stacks />
+
       {/* <Projects /> */}
     </main>
   );
