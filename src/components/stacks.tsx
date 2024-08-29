@@ -9,6 +9,7 @@ import {
   TooltipTrigger,
 } from "./ui/tooltip";
 import { packagesIcons } from "@/assets/packages";
+import Link from "next/link";
 
 export function Stacks() {
   const stacks = [
@@ -39,8 +40,10 @@ export function Stacks() {
               <TooltipProvider key={index}>
                 <Tooltip>
                   <TooltipTrigger>
-                    <div
+                    <Link
                       key={index}
+                      href={itemImg.url}
+                      target="_blank"
                       className="grid bg-opacity-50 backdrop-blur-3xl place-items-center rounded-lg w-20 h-20 shadow-lg dark:shadow-2xl dark:shadow-gray-700 transition-transform hover:scale-105"
                     >
                       <Image
@@ -50,7 +53,7 @@ export function Stacks() {
                         alt={itemImg.alt}
                         className="aspect-video"
                       />
-                    </div>
+                    </Link>
                   </TooltipTrigger>
                   <TooltipContent>
                     <p>{itemImg.alt}</p>

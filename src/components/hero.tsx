@@ -9,11 +9,11 @@ export function Hero() {
       <div className="flex items-center justify-between">
         <div className="flex flex-col gap-6">
           <h1 className="text-5xl font-bold">
-            Olá, eu sou Jean Nesi 👋 <br /> Dev Front-end
+            Olá, eu sou <br /> Jean Nesi 👋
           </h1>
 
           <p className="text-gray-500 text-base dark:text-gray-300">
-            Unindo design e código, sigo criando projetos únicos.
+            Minha missão? Unir design e código para dar vida a suas ideias.
           </p>
 
           <div className="flex gap-4">
