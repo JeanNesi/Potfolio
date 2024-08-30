@@ -1,27 +1,11 @@
-"use client";
-
 import { Github, Linkedin } from "lucide-react";
 import { Button } from "../ui/button";
 import Link from "next/link";
 import SvgComponent from "./heroSVG";
-import { motion } from "framer-motion";
 
 export function Hero() {
   return (
-    <motion.div
-      initial={{
-        opacity: 0,
-        y: 100,
-      }}
-      animate={{
-        opacity: 1,
-        y: 0,
-      }}
-      transition={{
-        duration: 1,
-      }}
-      className="flex flex-col gap-6 w-full py-20"
-    >
+    <div className="flex flex-col gap-6 w-full py-20">
       <div className="flex items-center justify-between">
         <div className="flex flex-col gap-6">
           <h1 className="text-5xl font-bold">
@@ -59,6 +43,6 @@ export function Hero() {
 
         <SvgComponent />
       </div>
-    </motion.div>
+    </div>
   );
 }

@@ -1,6 +1,3 @@
-import { systemsIcons } from "@/assets/systems";
-import { tecnologiesIcons } from "@/assets/tecnology";
-import { toolsIcons } from "@/assets/tools";
 import Image from "next/image";
 import {
   Tooltip,
@@ -8,26 +5,32 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "./ui/tooltip";
-import { packagesIcons } from "@/assets/packages";
+
 import Link from "next/link";
+import {
+  packagesIconsGroup,
+  systemsIconsGroup,
+  tecnologiesIconsGroup,
+  toolsIconsGroup,
+} from "@/assets";
 
 export function Stacks() {
   const stacks = [
     {
       title: "Tecnologias",
-      items: tecnologiesIcons,
+      items: tecnologiesIconsGroup,
     },
     {
       title: "Pacotes",
-      items: packagesIcons,
+      items: packagesIconsGroup,
     },
     {
       title: "Ferramentas",
-      items: toolsIcons,
+      items: toolsIconsGroup,
     },
     {
       title: "Sistemas Operacionais",
-      items: systemsIcons,
+      items: systemsIconsGroup,
     },
   ];
   return (
@@ -48,10 +51,8 @@ export function Stacks() {
                     >
                       <Image
                         src={itemImg.src}
-                        width={80}
-                        height={80}
                         alt={itemImg.alt}
-                        className="aspect-video"
+                        className="aspect-video w-16 h-16"
                       />
                     </Link>
                   </TooltipTrigger>
