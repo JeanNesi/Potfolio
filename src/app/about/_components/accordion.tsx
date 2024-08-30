@@ -45,7 +45,7 @@ export function AboutAccordion({ type, items }: IProps) {
           </AccordionTrigger>
           <AccordionContent className="flex flex-col gap-4">
             <div className="flex flex-col gap-2">
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 flex-wrap">
                 <Building2 size={16} />
                 <Link
                   href={item.companyUrl}
@@ -78,7 +78,10 @@ export function AboutAccordion({ type, items }: IProps) {
 
             <ul className="flex flex-col gap-2 max-w-96 ">
               {item.description.map((description, index) => (
-                <li key={index} className="ml-3 flex gap-2 text-gray-300">
+                <li
+                  key={index}
+                  className="ml-3 flex gap-2 text-gray-600 dark:text-gray-400"
+                >
                   <div>•</div> {description}
                 </li>
               ))}

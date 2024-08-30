@@ -12,6 +12,7 @@ import prisma from "./prisma.svg";
 import eslint from "./eslint.svg";
 import prettier from "./prettier.svg";
 import formik from "./formik.svg";
+import framer from "./framer.svg";
 
 export const packagesIcons = {
   hookform,
@@ -28,4 +29,5 @@ export const packagesIcons = {
   eslint,
   prettier,
   formik,
+  framer,
 };

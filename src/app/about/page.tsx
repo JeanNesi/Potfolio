@@ -12,16 +12,16 @@ import { AboutSections } from "./_components/sections";
 
 export default function AboutPage() {
   return (
-    <main className="flex flex-col w-full max-w-6xl p-6 mx-auto gap-20">
+    <main className="flex flex-col w-full max-w-6xl px-6 py-8 mx-auto gap-20">
       <div>
         <div className="flex gap-6 flex-col-reverse justify-between lg:flex-row">
-          {/* <Image
+          <Image
             src={img.profilePic}
             alt=""
             width={400}
             height={300}
             className="rounded-lg aspect-square object-scale-down mx-auto"
-          /> */}
+          />
           <div className="flex flex-col gap-6">
             <h2 className="text-4xl font-bold">Sobre mim</h2>
             <p className="text-gray-700 dark:text-gray-300">
@@ -35,7 +35,7 @@ export default function AboutPage() {
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger>
-                    <Link href="/stack" className="underline">
+                    <Link href="/stacks" className="underline">
                       entre outras
                     </Link>
                   </TooltipTrigger>

@@ -26,6 +26,11 @@ export const packagesIconsGroup: IIcon[] = [
     url: "https://formik.org/",
   },
   {
+    alt: "Framer Motion",
+    src: packagesIcons.framer,
+    url: "https://www.framer.com/motion/",
+  },
+  {
     alt: "Google Maps API",
     src: packagesIcons.googleMaps,
     url: "https://developers.google.com/maps/documentation/javascript/overview?hl=pt-br",
@@ -169,7 +174,11 @@ export const toolsIconsGroup: IIcon[] = [
     src: toolsIcons.dbeaver,
     url: "https://dbeaver.io/",
   },
-
+  {
+    alt: "Vercel",
+    src: toolsIcons.vercel,
+    url: "https://vercel.com/",
+  },
   {
     alt: "Postman",
     src: toolsIcons.postman,

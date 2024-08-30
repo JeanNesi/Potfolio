@@ -5,6 +5,7 @@ import jira from "./jira.svg";
 import postman from "./postman.svg";
 import vscode from "./vscode.svg";
 import chatGPT from "./chatGPT.svg";
+import vercel from "./vercel.svg";
 
 export const toolsIcons = {
   dbeaver,
@@ -14,4 +15,5 @@ export const toolsIcons = {
   postman,
   vscode,
   chatGPT,
+  vercel,
 };

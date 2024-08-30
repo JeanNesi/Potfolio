@@ -48,11 +48,13 @@ export function AboutSections() {
   const sections = [
     {
       title: "Experiências",
+      type: "experience" as "experience",
       icon: <Laptop />,
       items: experiences,
     },
     {
       title: "Formações",
+      type: "graduation" as "graduation",
       icon: <GraduationCap />,
       items: graduations,
     },
@@ -68,7 +70,7 @@ export function AboutSections() {
             <h3 className="text-2xl font-bold">{section.title}</h3>
           </div>
 
-          <AboutAccordion type="experience" items={section.items} />
+          <AboutAccordion type={section.type} items={section.items} />
         </div>
       ))}
     </div>
