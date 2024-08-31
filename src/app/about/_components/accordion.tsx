@@ -37,7 +37,7 @@ export function AboutAccordion({ type, items }: IProps) {
   };
 
   return (
-    <Accordion type="single" collapsible>
+    <Accordion type="single" collapsible defaultValue={"item-0"}>
       {items.map((item, index) => (
         <AccordionItem key={index} value={`item-${index}`}>
           <AccordionTrigger>

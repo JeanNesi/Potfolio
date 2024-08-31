@@ -1,5 +1,8 @@
+"use client";
+
 import { GraduationCap, Laptop } from "lucide-react";
 import { AboutAccordion } from "./accordion";
+import { motion } from "framer-motion";
 
 export function AboutSections() {
   const experiences = [
@@ -61,7 +64,20 @@ export function AboutSections() {
   ];
 
   return (
-    <div className="flex flex-col gap-6">
+    <motion.div
+      className="flex flex-col gap-6"
+      initial={{
+        opacity: 0,
+        y: 200,
+      }}
+      animate={{
+        opacity: 1,
+        y: 0,
+      }}
+      transition={{
+        duration: 1,
+      }}
+    >
       {sections.map((section, index) => (
         <div key={index}>
           <div className="flex  gap-4 items-center">
@@ -73,6 +89,6 @@ export function AboutSections() {
           <AboutAccordion type={section.type} items={section.items} />
         </div>
       ))}
-    </div>
+    </motion.div>
   );
 }

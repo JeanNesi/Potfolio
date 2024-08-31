@@ -1,8 +1,11 @@
+"use client";
+
 import { packagesIcons } from "@/assets/packages";
 import { tecnologiesIcons } from "@/assets/tecnology";
 import { toolsIcons } from "@/assets/tools";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function HowItWasMadePage() {
   const stacks = [
@@ -50,7 +53,20 @@ export default function HowItWasMadePage() {
     },
   ];
   return (
-    <main className="flex flex-col w-full max-w-6xl px-6 py-8 mx-auto gap-8">
+    <motion.main
+      className="flex flex-col w-full max-w-6xl px-6 py-8 mx-auto gap-8"
+      initial={{
+        opacity: 0,
+        x: -200,
+      }}
+      animate={{
+        opacity: 1,
+        x: 0,
+      }}
+      transition={{
+        duration: 1,
+      }}
+    >
       <h1 className="text-5xl font-bold">Como foi feito</h1>
 
       <p>
@@ -64,7 +80,7 @@ export default function HowItWasMadePage() {
         {stacks.map((stack, index) => (
           <Card
             key={index}
-            className="w-fit hover:opacity-70 transition-all cursor-pointer"
+            className="w-fit hover:scale-105 transition-all cursor-pointer"
           >
             <CardContent className="p-8 flex gap-2 items-center">
               <Image
@@ -83,6 +99,6 @@ export default function HowItWasMadePage() {
           </Card>
         ))}
       </div>
-    </main>
+    </motion.main>
   );
 }

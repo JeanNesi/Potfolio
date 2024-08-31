@@ -57,7 +57,7 @@ export function Hero() {
           </div>
         </div>
 
-        <SvgComponent />
+        <SvgComponent className="hidden md:flex" />
       </div>
     </motion.div>
   );

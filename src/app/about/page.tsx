@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { calcAge } from "@/utils/ageCalculator";
 import Link from "next/link";
@@ -9,11 +11,22 @@ import {
 } from "@/components/ui/tooltip";
 import { img } from "@/assets/img";
 import { AboutSections } from "./_components/sections";
+import { motion } from "framer-motion";
 
 export default function AboutPage() {
   return (
     <main className="flex flex-col w-full max-w-6xl px-6 py-8 mx-auto gap-20">
-      <div>
+      <motion.div
+        initial={{
+          opacity: 0,
+        }}
+        animate={{
+          opacity: 1,
+        }}
+        transition={{
+          duration: 1,
+        }}
+      >
         <div className="flex gap-6 flex-col-reverse justify-between lg:flex-row">
           <Image
             src={img.profilePic}
@@ -58,7 +71,7 @@ export default function AboutPage() {
             </p>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       <AboutSections />
     </main>
