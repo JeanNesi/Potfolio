@@ -34,6 +34,7 @@ export function ProjectCard({
   devDescription,
   index,
 }: IProjectCard) {
+  const className = `transform transition-transform ease-linear group-hover:-translate-y-${translateY}`;
   return (
     <motion.div
       className="flex flex-col gap-4 w-full"
@@ -74,7 +75,7 @@ export function ProjectCard({
             <Image
               src={imgSrc}
               alt="Scroll on Hover Image"
-              className={`transform transition-transform ease-linear group-hover:-translate-y-full`}
+              className={className}
               style={{ transitionDuration }}
               objectFit="cover"
             />
