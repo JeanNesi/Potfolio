@@ -1,40 +1,43 @@
 import { img } from "@/assets/img";
-import { ProjectCard } from "@/components/projectCard";
+import { IProjectCard, ProjectCard } from "@/components/projectCard";
 import Link from "next/link";
 
 export default function ProjectsPage() {
-  const projects = [
+  const projects: IProjectCard[] = [
     {
       title: "Estuda AI",
       description:
         "Estuda AI oferece a criação de quadros de estudo utilizando inteligência artificial, proporcionando uma abordagem mais organizada e otimizada para seus estudos.",
       imgSrc: img.estudaAiLp,
-      translateY: "80%",
+      translateY: "3/4",
       transitionDuration: "10s",
       devDescription:
         "A aplicação foi desenvolvida utilizando as seguintes tecnologias: React JS, TypeScript, Vite.js, Tailwind, Shadcn/ui, HookForm e Zod.",
+      index: 0,
     },
     {
       title: "Apera",
       description:
         "Apera é uma plataforma que permite gerenciar e acompanhar seus investimentos de forma fácil e intuitiva. Com a Apera, você pode monitorar sua carteira de investimentos e o desempenho de suas ações em tempo real. A plataforma integra-se com a Brapi, proporcionando atualizações contínuas e precisas sobre seus investimentos.",
       imgSrc: img.apera,
-      translateY: "50%",
+      translateY: "1/2",
       transitionDuration: "3s",
       repoUrl: "https://github.com/JeanNesi/Apera-ABP",
       devDescription:
         "A aplicação foi desenvolvida utilizando as seguintes tecnologias: React JS, TypeScript, Vite.js, Styled-components, Formik e Yup.",
+      index: 1,
     },
     {
       title: "ChatBot AI",
       description:
         "O Chatbot é uma aplicação que simula o funcionamento do ChatGPT, porém de forma local. Isso significa que o modelo de linguagem roda diretamente na máquina do usuário, utilizando apenas os recursos locais. Essa abordagem torna o uso do chatbot totalmente gratuito.",
       imgSrc: img.chatbot,
-      translateY: "45%",
+      translateY: "1/3",
       transitionDuration: "3s",
       repoUrl: "https://github.com/JeanNesi/Chatbot-AI",
       devDescription:
         "A aplicação foi desenvolvida utilizando as seguintes tecnologias: Next Js, TypeScript, Shadcn/ui, Tailwind, Ollama.",
+      index: 2,
     },
   ];
   return (
@@ -56,7 +59,7 @@ export default function ProjectsPage() {
         </p>
       </div>
       {projects.map((project, index) => (
-        <ProjectCard key={index} {...project} index={index} />
+        <ProjectCard key={index} {...project} />
       ))}
     </main>
   );

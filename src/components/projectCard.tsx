@@ -13,12 +13,12 @@ import {
   AlertDialogTrigger,
 } from "./ui/alert-dialog";
 
-interface IProps {
+export interface IProjectCard {
   title: string;
   description: string;
   imgSrc: StaticImageData;
   repoUrl?: string;
-  translateY?: string;
+  translateY?: "3/4" | "1/2" | "1/3";
   transitionDuration?: string;
   devDescription?: string;
   index: number;
@@ -29,11 +29,11 @@ export function ProjectCard({
   imgSrc,
   description,
   repoUrl,
-  translateY = "full",
+  translateY = "1/2",
   transitionDuration = "3s",
   devDescription,
   index,
-}: IProps) {
+}: IProjectCard) {
   return (
     <motion.div
       className="flex flex-col gap-4 w-full"
@@ -74,7 +74,7 @@ export function ProjectCard({
             <Image
               src={imgSrc}
               alt="Scroll on Hover Image"
-              className={`transform  transition-transform ease-linear group-hover:-translate-y-[${translateY}] `}
+              className={`transform transition-transform ease-linear group-hover:-translate-y-${translateY}`}
               style={{ transitionDuration }}
               objectFit="cover"
             />
