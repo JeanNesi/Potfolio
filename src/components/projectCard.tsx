@@ -74,7 +74,7 @@ export function ProjectCard({
             <Image
               src={imgSrc}
               alt="Scroll on Hover Image"
-              className={`transform transition-transform ease-linear group-hover:-translate-y-${translateY}`}
+              className={`transform transition-transform ease-linear group-hover:-translate-y-full`}
               style={{ transitionDuration }}
               objectFit="cover"
             />
