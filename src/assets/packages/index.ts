@@ -13,6 +13,7 @@ import eslint from "./eslint.svg";
 import prettier from "./prettier.svg";
 import formik from "./formik.svg";
 import framer from "./framer.svg";
+import threeJs from "./threeJs.svg";
 
 export const packagesIcons = {
   hookform,
@@ -30,4 +31,5 @@ export const packagesIcons = {
   prettier,
   formik,
   framer,
+  threeJs,
 };

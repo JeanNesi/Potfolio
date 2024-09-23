@@ -3,8 +3,8 @@
 import { Github, Linkedin } from "lucide-react";
 import { Button } from "../ui/button";
 import Link from "next/link";
-import SvgComponent from "./heroSVG";
 import { motion } from "framer-motion";
+import HeroLaptopCan from "./heroLaptopCan";
 
 export function Hero() {
   return (
@@ -20,9 +20,9 @@ export function Hero() {
       transition={{
         duration: 1,
       }}
-      className="flex flex-col gap-6 w-full py-20"
+      className="flex flex-col gap-6 w-full lg:py-20 py-9"
     >
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col items-center justify-between lg:flex-row">
         <div className="flex flex-col gap-6">
           <h1 className="text-5xl font-bold">
             Olá, eu sou <br /> Jean Nesi 👋
@@ -57,7 +57,7 @@ export function Hero() {
           </div>
         </div>
 
-        <SvgComponent className="hidden md:flex" />
+        <HeroLaptopCan />
       </div>
     </motion.div>
   );
