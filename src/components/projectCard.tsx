@@ -12,7 +12,6 @@ import {
   AlertDialogHeader,
   AlertDialogTrigger,
 } from "./ui/alert-dialog";
-import { cn } from "@/lib/utils";
 
 export interface IProjectCard {
   title: string;
@@ -35,6 +34,7 @@ export function ProjectCard({
   devDescription,
   index,
 }: IProjectCard) {
+  const className = `transform transition-transform ease-linear group-hover:-translate-y-${translateY}`;
   return (
     <motion.div
       className="flex flex-col gap-4 w-full"
@@ -70,17 +70,16 @@ export function ProjectCard({
       )}
 
       <div className="relative lg:h-96 overflow-hidden group rounded-3xl lg:hover:scale-105 transition-transform md:pointer-events-auto pointer-events-none shadow-2xl h-fit">
-        <Image
-          src={imgSrc}
-          alt="Scroll on Hover Image"
-          className={cn(
-            "transform transition-transform ease-linear",
-            `group-hover:-translate-y-${translateY}`
-          )}
-          style={{ transitionDuration }}
-          objectFit="cover"
-        />
         <AlertDialog>
+          <AlertDialogTrigger>
+            <Image
+              src={imgSrc}
+              alt="Scroll on Hover Image"
+              className={className}
+              style={{ transitionDuration }}
+              objectFit="cover"
+            />
+          </AlertDialogTrigger>
           <AlertDialogContent className="max-w-screen-2xl">
             <AlertDialogHeader>
               <AlertDialogDescription className="overflow-auto max-h-[80dvh]">
