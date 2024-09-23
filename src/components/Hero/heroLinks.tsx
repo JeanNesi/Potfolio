@@ -42,7 +42,7 @@ export function HeroLinks() {
                 fill
                 className="object-cover"
               />
-              <h6 className="absolute bottom-2 left-3 font-bold">
+              <h6 className="absolute bottom-2 left-3 font-bold text-white">
                 {link.label}
               </h6>
 
