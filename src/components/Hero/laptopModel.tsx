@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useFrame } from "@react-three/fiber";
 import { useGLTF } from "@react-three/drei";
 import { a as three } from "@react-spring/three";
+import useIsDesktop from "@/hooks/useIsDesktop";
 
 type GLTFResult = {
   nodes: {
@@ -19,6 +20,7 @@ type ModelProps = JSX.IntrinsicElements["group"] & {
 };
 
 export function LaptopModel({ hinge, open, ...rest }: ModelProps) {
+  const isDesktop = useIsDesktop();
   const group = useRef<THREE.Group>(null);
   const { nodes, materials } = useGLTF(
     "/mac-draco.glb"
@@ -65,7 +67,7 @@ export function LaptopModel({ hinge, open, ...rest }: ModelProps) {
       onPointerOver={(e) => (e.stopPropagation(), setHovered(true))}
       onPointerOut={(e) => setHovered(false)}
       dispose={null}
-      scale={[1.2, 1.2, 1.2]}
+      scale={isDesktop ? [1.4, 1.4, 1.4] : [1.2, 1.2, 1.2]}
     >
       <three.group rotation-x={hinge} position={[0, -0.04, 0.41]}>
         <group position={[0, 2.96, -0.13]} rotation={[Math.PI / 2, 0, 0]}>
