@@ -5,6 +5,7 @@ import { Button } from "../ui/button";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import HeroLaptopCan from "./heroLaptopCan";
+import { HeroLinks } from "./heroLinks";
 
 export function Hero() {
   return (
@@ -20,7 +21,7 @@ export function Hero() {
       transition={{
         duration: 1,
       }}
-      className="flex flex-col gap-6 w-full lg:py-20 py-9"
+      className="flex flex-col gap-10 w-full py-9"
     >
       <div className="flex flex-col items-center justify-between lg:flex-row">
         <div className="flex flex-col gap-6">
@@ -59,6 +60,8 @@ export function Hero() {
 
         <HeroLaptopCan />
       </div>
+
+      <HeroLinks />
     </motion.div>
   );
 }

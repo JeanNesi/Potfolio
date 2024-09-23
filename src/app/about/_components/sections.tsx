@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 export function AboutSections() {
   const experiences = [
     {
-      title: "Front-end Developer",
+      title: "Ada / Front-end Developer",
       company: "Ada Software House",
       companyUrl: "https://adasoftwarehouse.com/",
       complement: "Híbrido",
@@ -22,6 +22,16 @@ export function AboutSections() {
         "Desenvolvimento de componentes reutilizáveis em conformidade com as melhores práticas de design e programação, visando simplificar a implementação e manutenção de projetos.",
         "Desenvolvimento de aplicações nas áreas de saúde, segurança, indústria, educação e comércio.",
       ],
+    },
+    {
+      title: "Darwin / Front-end Developer",
+      company: "Darwin - Saúde Inteligente",
+      companyUrl: "https://adasoftwarehouse.com/",
+      complement: "Híbrido",
+      startDate: new Date(2022, 7, 1),
+      endDate: `momento`,
+      address: "Criciúma, SC",
+      description: [],
     },
   ];
 
