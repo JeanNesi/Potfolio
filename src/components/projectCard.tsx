@@ -10,6 +10,7 @@ import {
   AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
+  AlertDialogTitle,
   AlertDialogTrigger,
 } from "./ui/alert-dialog";
 
@@ -80,12 +81,16 @@ export function ProjectCard({
               objectFit="cover"
             />
           </AlertDialogTrigger>
+
           <AlertDialogContent className="max-w-screen-2xl">
             <AlertDialogHeader>
-              <AlertDialogDescription className="overflow-auto max-h-[80dvh]">
-                <Image src={imgSrc} alt="Scroll on Hover Image" />
-              </AlertDialogDescription>
+              <AlertDialogTitle>{title}</AlertDialogTitle>
             </AlertDialogHeader>
+
+            <AlertDialogDescription className="overflow-auto max-h-[80dvh]">
+              <Image src={imgSrc} alt="Scroll on Hover Image" />
+            </AlertDialogDescription>
+
             <AlertDialogFooter>
               <AlertDialogAction>Fechar</AlertDialogAction>
             </AlertDialogFooter>

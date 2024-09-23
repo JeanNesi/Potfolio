@@ -83,38 +83,23 @@ export default function HowItWasMadePage() {
         utilizei:
       </p>
 
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-3 lg:gap-2">
         {stacks.map((stack, index) => (
           <Card
             key={index}
             className="w-fit hover:scale-105 transition-all cursor-pointer"
           >
             <CardContent className="p-8 flex gap-2 items-center">
-              {stack.iconUrl && (
-                <Link
-                  href={stack.iconUrl}
-                  className="flex items-center h-24 w-24 aspect-video"
-                  target="_blank"
-                >
-                  <Image
-                    src={stack.src}
-                    alt={stack.alt}
-                    width={96}
-                    height={96}
-                    className="aspect-video rounded-lg"
-                  />
-                </Link>
-              )}
-
-              {!stack.iconUrl && (
-                <Image
-                  src={stack.src}
-                  alt={stack.alt}
-                  width={80}
-                  height={80}
-                  className="aspect-video rounded-lg"
-                />
-              )}
+              <Image
+                src={stack.src}
+                alt={stack.alt}
+                width={80}
+                height={80}
+                className="aspect-video rounded-lg"
+                onClick={() => {
+                  if (stack.iconUrl) window.open(stack.iconUrl, "_blank");
+                }}
+              />
 
               <div className="flex flex-col gap-2">
                 <p className="font-bold">{stack.alt}</p>
