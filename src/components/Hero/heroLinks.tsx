@@ -32,16 +32,16 @@ export function HeroLinks() {
       {links.map((link) => (
         <Card
           key={link.href}
-          className=" flex-grow basis-60 group aspect-video overflow-hidden grayscale-[100] hover:grayscale-0 transition-all duration-300 cursor-pointer"
+          className="flex-grow basis-60 group aspect-video overflow-hidden grayscale-[100] hover:grayscale-0 transition-all duration-300 cursor-pointer"
         >
           <Link href={link.href} aria-label={link.label}>
             <CardContent className="p-0">
-              <Image
+              {/* <Image
                 src={link.img}
                 alt="Sobre mim"
                 fill
                 className="object-cover"
-              />
+              /> */}
               <h6 className="absolute bottom-2 left-3 font-bold text-white">
                 {link.label}
               </h6>
