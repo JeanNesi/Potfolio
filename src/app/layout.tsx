@@ -5,6 +5,7 @@ import { Navbar } from "@/components/Navbar/navbar";
 import { Footer } from "@/components/footer";
 import { ThemeProvider } from "next-themes";
 import { ThemeChanger } from "@/components/themeChanger";
+import { useEffect } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 

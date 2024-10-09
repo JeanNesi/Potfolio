@@ -6,8 +6,16 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import HeroLaptopCan from "./heroLaptopCan";
 import { HeroLinks } from "./heroLinks";
+import { useEffect } from "react";
+import { analytics } from "@/lib/firebase";
 
 export function Hero() {
+  useEffect(() => {
+    if (analytics) {
+      console.log("Firebase Analytics initialized");
+    }
+  }, []);
+
   return (
     <motion.div
       initial={{
