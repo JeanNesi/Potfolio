@@ -13,8 +13,6 @@ const firebaseConfig = {
   measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
 };
 
-console.log(process.env.FIREBASE_MESSAGING_SENDER_ID);
-
 const app = initializeApp(firebaseConfig);
 
 if (typeof window !== "undefined") {
