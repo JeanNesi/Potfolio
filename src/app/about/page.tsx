@@ -30,7 +30,7 @@ export default function AboutPage() {
         <div className="flex gap-6 flex-col-reverse justify-between lg:flex-row">
           <Image
             src={img.profilePic}
-            alt=""
+            alt="Imagem de perfil"
             width={400}
             height={300}
             className="rounded-lg aspect-square object-scale-down mx-auto"

@@ -11,6 +11,7 @@ export function ThemeChanger() {
 
   return (
     <Button
+      aria-label="Alterar tema"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       className="fixed bottom-4 right-4 p-2 bg-slate-100 hover:bg-slate-900 shadow-lg dark:bg-slate-900 dark:hover:bg-slate-100"
     >

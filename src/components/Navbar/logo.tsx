@@ -12,7 +12,7 @@ export function NavbarLogo() {
         transition: { duration: 0.5 },
       }}
     >
-      <Link href="/">
+      <Link aria-label="Logo - Voltar a home" href="/">
         <Atom name="menu" size={40} />
       </Link>
     </motion.div>

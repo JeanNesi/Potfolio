@@ -42,9 +42,9 @@ export function HeroLinks() {
                 fill
                 className="object-cover"
               />
-              <h6 className="absolute bottom-2 left-3 font-bold text-white">
+              <p className="absolute bottom-2 left-3 font-bold text-white">
                 {link.label}
-              </h6>
+              </p>
 
               <div className="absolute bottom-2 right-3 text-gray-900 font-medium text-xs bg-white rounded-3xl flex items-center py-1 px-2 ">
                 <p className="w-0 overflow-hidden group-hover:w-14 transition-all whitespace-nowrap">
