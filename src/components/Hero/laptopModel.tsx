@@ -19,7 +19,7 @@ type ModelProps = JSX.IntrinsicElements["group"] & {
   hinge: any;
 };
 
-export function LaptopModel({ hinge, open, ...rest }: ModelProps) {
+const LaptopModel = React.memo(({ hinge, open, ...rest }: ModelProps) => {
   const isDesktop = useIsDesktop();
   const group = useRef<THREE.Group>(null);
   const { nodes, materials } = useGLTF(
@@ -34,6 +34,8 @@ export function LaptopModel({ hinge, open, ...rest }: ModelProps) {
   );
 
   useFrame((state) => {
+    if (!open) return;
+
     const t = state.clock.getElapsedTime();
 
     if (group.current) {
@@ -107,4 +109,8 @@ export function LaptopModel({ hinge, open, ...rest }: ModelProps) {
       />
     </group>
   );
-}
+});
+
+LaptopModel.displayName = "LaptopModel";
+
+export default LaptopModel;

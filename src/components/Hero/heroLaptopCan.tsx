@@ -9,7 +9,7 @@ import {
   Html,
   useProgress,
 } from "@react-three/drei";
-import { LaptopModel } from "./laptopModel";
+import LaptopModel from "./laptopModel";
 import { useTheme } from "next-themes";
 
 function Loader() {
