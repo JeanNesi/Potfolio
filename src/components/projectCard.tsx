@@ -59,11 +59,11 @@ export function ProjectCard({
       {defaultImage && (
         <div
           className={cn(
-            "p-6 flex justify-center items-center rounded-3xl",
+            "p-6 flex justify-center items-center rounded-3xl h-[384px] lg:hover:scale-105 transition-transform",
             className
           )}
         >
-          <div className="relative aspect-video max-w-[560px] w-full ">
+          <div className="relative aspect-video max-w-[250px] w-full ">
             <Image
               src={imgSrc}
               fill

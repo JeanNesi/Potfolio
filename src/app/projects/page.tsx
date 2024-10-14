@@ -167,13 +167,13 @@ export default function ProjectsPage() {
         </p>
       </div>
 
-      <Tabs defaultValue="professional" className="w-full">
+      <Tabs defaultValue="personal" className="w-full">
         <TabsList className="w-full">
-          <TabsTrigger className="w-full" value="professional">
-            Profissionais
-          </TabsTrigger>
           <TabsTrigger className="w-full" value="personal">
             Pessoais
+          </TabsTrigger>
+          <TabsTrigger className="w-full" value="professional">
+            Profissionais
           </TabsTrigger>
         </TabsList>
         <TabsContent value="professional" className="py-6">
