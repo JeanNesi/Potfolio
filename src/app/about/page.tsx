@@ -45,9 +45,7 @@ export default function AboutPage() {
               Como desenvolvedor front-end, venho acumulando cerca de{" "}
               {calcAge(new Date(2022, 3, 18))} anos de experiência trabalhando
               com tecnologias como ReactJS, TypeScript, Styled-components, HTML,
-              CSS, Next.js, Git, entre outras. Sou apaixonado por criar
-              interfaces dinâmicas e funcionais que proporcionam uma experiência
-              incrível ao usuário.
+              CSS, Next.js, Git,{" "}
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger>
@@ -60,8 +58,10 @@ export default function AboutPage() {
                   </TooltipContent>
                 </Tooltip>
               </TooltipProvider>
-              . Minha paixão é criar interfaces dinâmicas e funcionais que
-              oferecem uma excelente experiência ao usuário.
+              . Sou apaixonado por criar interfaces dinâmicas e funcionais que
+              proporcionam uma experiência incrível ao usuário. Minha paixão é
+              criar interfaces dinâmicas e funcionais que oferecem uma excelente
+              experiência ao usuário.
               <br />
               <br />
               Com uma base sólida em React, TypeScript e Node.js, já tive a
