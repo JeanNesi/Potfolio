@@ -7,31 +7,39 @@ import {
 import { dateFormatter } from "@/utils/dateFormatter";
 import { Building2, Calendar, MapPin } from "lucide-react";
 import Link from "next/link";
+import {
+  differenceInCalendarYears,
+  differenceInMonths,
+  differenceInYears,
+} from "date-fns";
+
+interface IItem {
+  title: string;
+  company: string;
+  companyUrl: string;
+  complement: string;
+  startDate: Date;
+  endDate: string | Date;
+  address: string;
+  description: string[];
+}
 
 interface IProps {
   type: "experience" | "graduation";
-  items: {
-    title: string;
-    company: string;
-    companyUrl: string;
-    complement: string;
-    startDate: Date;
-    endDate: string | Date;
-    address: string;
-    description: string[];
-  }[];
+  items: IItem[];
 }
 
 export function AboutAccordion({ type, items }: IProps) {
-  const calcExperienceTime = (item: IProps["items"][0]) => {
+  const calcExperienceTime = (item: IItem) => {
     const startDate = new Date(item.startDate);
+
     const endDate =
       item.endDate !== "momento" ? new Date(item.endDate) : new Date();
 
-    const diffMonths = endDate.getMonth() - startDate.getMonth();
-    const diffYears = Math.ceil(
-      endDate.getFullYear() - startDate.getFullYear()
-    );
+    const diffYears = differenceInYears(endDate, startDate);
+    const diffMonths = differenceInMonths(endDate, startDate) % 12;
+
+    if (!diffYears) return `${diffMonths} meses `;
 
     return `${diffYears} anos e ${diffMonths} meses `;
   };

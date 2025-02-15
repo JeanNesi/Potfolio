@@ -7,12 +7,22 @@ import { motion } from "framer-motion";
 export function AboutSections() {
   const experiences = [
     {
+      title: "Next Fit / Front-end Developer",
+      company: "Next Fit",
+      companyUrl: "https://nextfit.com.br/",
+      complement: "Presencial",
+      startDate: new Date(2024, 10, 18),
+      endDate: "momento",
+      address: "Criciúma, SC",
+      description: [],
+    },
+    {
       title: "Ada / Front-end Developer",
       company: "Ada Software House",
       companyUrl: "https://adasoftwarehouse.com/",
       complement: "Híbrido",
       startDate: new Date(2022, 3, 18),
-      endDate: `momento`,
+      endDate: new Date(2024, 10, 18),
       address: "Criciúma, SC",
       description: [
         "Desenvolvimento de aplicações ReactJS em TypeScript, incluindo implementação de novas funcionalidades e manutenção em projetos existentes.",
@@ -29,7 +39,7 @@ export function AboutSections() {
       companyUrl: "https://adasoftwarehouse.com/",
       complement: "Híbrido",
       startDate: new Date(2022, 7, 1),
-      endDate: `momento`,
+      endDate: new Date(2024, 10, 18),
       address: "Criciúma, SC",
       description: [],
     },
